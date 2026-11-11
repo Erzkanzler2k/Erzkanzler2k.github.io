@@ -90,6 +90,7 @@ check("skip-link на #main", /class="skip-link"[^>]+href="#main"/.test(html) &&
 check("меню имеет aria-label", /<nav[^>]+aria-label="[^"]+"/.test(html));
 check("есть aria-hidden у декоративных слоёв", /aria-hidden="true"/.test(html));
 check("кнопка мобильного меню с aria-expanded", /aria-expanded="false"/.test(html));
+check("aria-label на pre только с явной ролью", !/<pre(?![^>]*role=)[^>]*aria-label=/.test(html));
 
 const imgs = [...html.matchAll(/<img\b[^>]*>/g)].map((m) => m[0]);
 check("у всех img есть alt", imgs.every((t) => /\balt="/.test(t)), `${imgs.filter((t) => !/alt="/.test(t)).length} без alt`);

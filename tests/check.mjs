@@ -64,6 +64,11 @@ for (const prop of ["og:title", "og:description", "og:type", "og:locale", "og:si
 }
 check("og:locale = ru_RU", /property="og:locale"[^>]+content="ru_RU"/.test(html));
 check("twitter:card", /name="twitter:card"/.test(html));
+const ogImage = (html.match(/property="og:image" content="([^"]+)"/) || [])[1] || "";
+check("og:image — абсолютный URL", /^https:\/\/erzkanzler2k\.github\.io\//.test(ogImage), ogImage);
+check("og:image существует в репозитории", ogImage && existsSync(resolve(ROOT, ogImage.replace(SITE_URL, ""))));
+check("og:image:width/height", /og:image:width" content="1200"/.test(html) && /og:image:height" content="630"/.test(html));
+check("twitter:card = summary_large_image", /name="twitter:card" content="summary_large_image"/.test(html));
 
 const h1s = [...html.matchAll(/<h1[\s>]/g)].length;
 check(`ровно один h1 (${h1s})`, h1s === 1);

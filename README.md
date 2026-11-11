@@ -13,6 +13,7 @@ assets/css/style.css  оформление, адаптив, reduced-motion, пе
 assets/js/main.js     появление секций, подсветка карточек, меню, скролл-прогресс
 404.html              страница ошибки (GitHub Pages отдаёт её автоматически)
 favicon.svg           иконка
+assets/img/og.jpg     OG-картинка 1200×630 для соцсетей
 robots.txt / sitemap.xml / .nojekyll
 tests/check.mjs       статические проверки (SEO, доступность, ссылки, ассеты)
 SPEC.md               спецификация и критерии приёмки

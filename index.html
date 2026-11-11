@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07080b">
+  <meta name="color-scheme" content="dark">
+  <script>document.documentElement.classList.add("js");</script>
+
+  <title>Erzkanzler Studio — студия вайб-кодинга</title>
+  <meta name="description" content="Студия вайб-кодинга: сайты, веб- и мобильные приложения, игры и AI-интеграции. От идеи до продакшена за один спринт — дизайн, код и запуск в одной команде.">
+  <link rel="canonical" href="https://erzkanzler2k.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Erzkanzler Studio">
+  <meta property="og:url" content="https://erzkanzler2k.github.io/">
+  <meta property="og:title" content="Erzkanzler Studio — студия вайб-кодинга">
+  <meta property="og:description" content="Сайты, приложения, игры и AI-интеграции. От идеи до продакшена за один спринт.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Erzkanzler Studio — студия вайб-кодинга">
+  <meta name="twitter:description" content="Сайты, приложения, игры и AI-интеграции. От идеи до продакшена за один спринт.">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Unbounded:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Erzkanzler Studio",
+    "description": "Студия вайб-кодинга: сайты, веб- и мобильные приложения, игры и AI-интеграции.",
+    "url": "https://erzkanzler2k.github.io/",
+    "areaServed": "Worldwide",
+    "knowsAbout": ["Вайб-кодинг", "Веб-разработка", "Мобильные приложения", "UI/UX дизайн", "Rust", "Kotlin", "TypeScript", "AI-интеграции", "Игры в браузере"],
+    "sameAs": ["https://github.com/Erzkanzler2k"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+  <div class="bg" aria-hidden="true">
+    <div class="aurora aurora--1"></div>
+    <div class="aurora aurora--2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Erzkanzler Studio — в начало страницы">
+        <span class="brand__mark" aria-hidden="true">E</span>
+        <span class="brand__text">erzkanzler<span class="brand__dot">.</span>studio</span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list" id="nav-menu">
+          <li><a href="#about">Студия</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#projects">Работы</a></li>
+          <li><a href="#process">Процесс</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--ghost btn--sm" href="https://github.com/Erzkanzler2k" target="_blank" rel="noopener noreferrer">
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Открыть меню">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow" data-reveal>
+            <span class="pulse" aria-hidden="true"></span>
+            Студия вайб-кодинга · открыта к проектам
+          </p>
+
+          <h1 class="hero__title" id="hero-title" data-reveal>
+            Продукты,<br>которые <span class="hero__title-accent">хочется трогать</span>
+          </h1>
+
+          <p class="hero__lead" data-reveal>
+            Небольшая студия на стыке дизайна и AI-инженерии. Берём идею,
+            за спринт превращаем её в работающий продукт и доводим до продакшена:
+            сайты, веб- и мобильные приложения, игры, AI-интеграции.
+          </p>
+
+          <div class="hero__cta" data-reveal>
+            <a class="btn btn--primary" href="#projects">
+              Смотреть работы <span aria-hidden="true">↓</span>
+            </a>
+            <a class="btn btn--ghost" href="#contact">
+              Обсудить проект <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <ul class="hero__meta" data-reveal>
+            <li><strong>7</strong> дней до прототипа</li>
+            <li><strong>3</strong> формата работы</li>
+            <li><strong>1</strong> команда без подрядчиков</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual" data-reveal>
+          <div class="terminal">
+            <div class="terminal__bar">
+              <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+              <em>~/studio</em>
+            </div>
+            <pre class="terminal__body" aria-label="Как выглядит процесс студии"><code><span class="c-prompt">$</span> vibe init "личный кабинет клиники"
+<span class="c-out">→ сценарии · структура · стек — 12 мин</span>
+<span class="c-prompt">$</span> vibe design --tone premium --dark
+<span class="c-out">→ 3 направления · 1 дизайн-система</span>
+<span class="c-prompt">$</span> vibe ship --target production
+<span class="c-out">→ build · tests · deploy</span>
+<span class="c-prompt">$</span> status
+<span class="c-ok">● готово к запуску</span><span class="c-caret" aria-hidden="true">_</span></code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Vibe coding</span><span>Design systems</span><span>TypeScript</span><span>Rust</span><span>Kotlin</span><span>Web</span><span>Mobile</span><span>Games</span><span>AI</span><span>Deploy</span>
+          <span>Vibe coding</span><span>Design systems</span><span>TypeScript</span><span>Rust</span><span>Kotlin</span><span>Web</span><span>Mobile</span><span>Games</span><span>AI</span><span>Deploy</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-index">01</span>
+          <h2 id="about-title">Студия</h2>
+          <p class="section-sub">Маленькая команда, которая закрывает весь цикл: смысл, дизайн, код, запуск.</p>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__text">
+            <p data-reveal>
+              Вайб-кодинг — это когда идея, дизайн и код собираются в одном потоке,
+              без месяцев согласований. Мы добавили к скорости инженерную дисциплину:
+              типы, тесты, ревью и предсказуемый деплой.
+            </p>
+            <p data-reveal>
+              Работаем без прослойки менеджеров и внешних подрядчиков: вы общаетесь
+              напрямую с теми, кто делает продукт. Каждые два-три дня — рабочая
+              демонстрация, а не отчёт в презентации.
+            </p>
+            <p data-reveal>
+              Нам интересны задачи, где важны детали: скорость интерфейса, аккуратная
+              типографика, приватность данных и ощущение, что продукт сделан для человека.
+            </p>
+          </div>
+
+          <dl class="facts" data-reveal>
+            <div><dt>Фокус</dt><dd>Веб, мобильные приложения, игры, AI</dd></div>
+            <div><dt>Формат</dt><dd>Фикс-смета или почасовая</dd></div>
+            <div><dt>Старт</dt><dd>Обычно в течение недели</dd></div>
+            <div><dt>Статус</dt><dd><span class="dot" aria-hidden="true"></span> берём новые проекты</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-index">02</span>
+          <h2 id="services-title">Услуги</h2>
+          <p class="section-sub">От одностраничника до продукта с AI внутри — собираем сами, без внешних подрядчиков.</p>
+        </div>
+
+        <div class="services">
+          <article class="service-card" data-reveal>
+            <span class="service-card__num" aria-hidden="true">01</span>
+            <h3>Лендинги и промо</h3>
+            <p>Страница, которая продаёт: смысл, структура, анимации и быстрая загрузка вместо шаблона.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-card__num" aria-hidden="true">02</span>
+            <h3>Веб-приложения</h3>
+            <p>Личные кабинеты, дашборды, интеграции и оплаты. TypeScript-стек или чистый HTML, если задача проще.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-card__num" aria-hidden="true">03</span>
+            <h3>Мобильные приложения</h3>
+            <p>Android и iOS из одной кодовой базы: Flutter или Capacitor. Сборка, подпись и публикация в сторах.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-card__num" aria-hidden="true">04</span>
+            <h3>Игры и интерактив</h3>
+            <p>Phaser 3, Three.js и Canvas: от idle-механик до 3D-сцен прямо в браузере.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-card__num" aria-hidden="true">05</span>
+            <h3>AI-интеграции</h3>
+            <p>Ассистенты, генерация контента и локальные модели. Без утечки данных в чужие облака.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-card__num" aria-hidden="true">06</span>
+            <h3>Дизайн-системы</h3>
+            <p>Токены, компоненты, тёмная тема и адаптив — чтобы продукт выглядел цельно на всех экранах.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-index">03</span>
+          <h2 id="projects-title">Работы</h2>
+          <p class="section-sub">Шесть проектов, которые лучше всего показывают диапазон: от P2P-ядра до игр и мобильных приложений.</p>
+        </div>
+
+        <div class="projects">
+          <a class="project-card" href="https://github.com/Erzkanzler2k/messager" target="_blank" rel="noopener noreferrer" data-reveal>
+            <div class="project-card__top">
+              <span class="project-card__kicker">Rust · Flutter</span>
+              <span class="project-card__arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3>Messager</h3>
+            <p>Децентрализованный P2P-мессенджер с end-to-end шифрованием: ядро на Rust, интерфейс на Flutter.</p>
+            <ul class="chips"><li>Rust</li><li>Flutter</li><li>E2E</li></ul>
+          </a>
+
+          <a class="project-card" href="https://github.com/Erzkanzler2k/rift-web-app" target="_blank" rel="noopener noreferrer" data-reveal>
+            <div class="project-card__top">
+              <span class="project-card__kicker">Rust · WASM</span>
+              <span class="project-card__arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3>Rift Web</h3>
+            <p>Тот же P2P-мессенджер, но в браузере: ядро на Rust, скомпилированное в WebAssembly без бэкенда.</p>
+            <ul class="chips"><li>Rust</li><li>WebAssembly</li><li>JS</li></ul>
+          </a>
+
+          <a class="project-card" href="https://github.com/Erzkanzler2k/wardrobe-app" target="_blank" rel="noopener noreferrer" data-reveal>
+            <div class="project-card__top">
+              <span class="project-card__kicker">TypeScript · Capacitor</span>
+              <span class="project-card__arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3>WiseWear</h3>
+            <p>Умный гардероб с AI-стилистом: учёт вещей, сборка образов и рекомендации по погоде. Web и Android из одной кодовой базы.</p>
+            <ul class="chips"><li>TypeScript</li><li>Android</li><li>AI</li></ul>
+          </a>
+
+          <a class="project-card" href="https://github.com/Erzkanzler2k/plenka" target="_blank" rel="noopener noreferrer" data-reveal>
+            <div class="project-card__top">
+              <span class="project-card__kicker">Kotlin · Android</span>
+              <span class="project-card__arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3>Плёнка</h3>
+            <p>Android-приложение и лендинг к нему: собственный визуальный язык и кинематографичная эстетика в мобильном интерфейсе.</p>
+            <ul class="chips"><li>Kotlin</li><li>Android</li><li>CSS</li></ul>
+          </a>
+
+          <a class="project-card" href="https://github.com/Erzkanzler2k/devushka-na-dache" target="_blank" rel="noopener noreferrer" data-reveal>
+            <div class="project-card__top">
+              <span class="project-card__kicker">Phaser 3 · JS</span>
+              <span class="project-card__arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3>Девушка на даче</h3>
+            <p>Idle-ферма для Яндекс Игр: игровой цикл на Phaser 3, сборка на Vite, арт из Google Flow.</p>
+            <ul class="chips"><li>Phaser 3</li><li>JavaScript</li><li>Games</li></ul>
+          </a>
+
+          <a class="project-card" href="https://github.com/Erzkanzler2k/dx11-visual-debug-overlay" target="_blank" rel="noopener noreferrer" data-reveal>
+            <div class="project-card__top">
+              <span class="project-card__kicker">C# · DirectX 11</span>
+              <span class="project-card__arrow" aria-hidden="true">↗</span>
+            </div>
+            <h3>DX11 Debug Overlay</h3>
+            <p>База для визуальной отладки в DirectX 11: оверлей на ImGui, готовый к встройке в рендер-пайплайн.</p>
+            <ul class="chips"><li>C#</li><li>DirectX 11</li><li>ImGui</li></ul>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-index">04</span>
+          <h2 id="process-title">Процесс</h2>
+          <p class="section-sub">Четыре шага, каждый заканчивается работающим результатом, а не документом.</p>
+        </div>
+
+        <ol class="steps">
+          <li data-reveal>
+            <span class="steps__num" aria-hidden="true">01</span>
+            <div>
+              <h3>Бриф <span class="badge">1–2 дня</span></h3>
+              <p>Разбираем задачу, аудиторию и ограничения. На выходе — объём работ, смета и план по неделям.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span class="steps__num" aria-hidden="true">02</span>
+            <div>
+              <h3>Прототип <span class="badge">3–5 дней</span></h3>
+              <p>Кликабельный макет и работающий вертикальный срез ключевого сценария — чтобы проверить идею руками.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span class="steps__num" aria-hidden="true">03</span>
+            <div>
+              <h3>Сборка <span class="badge">1–3 недели</span></h3>
+              <p>Продакшн-код, тесты, доступность и SEO. Прогресс показываем каждые два-три дня, правки — по ходу.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span class="steps__num" aria-hidden="true">04</span>
+            <div>
+              <h3>Запуск <span class="badge">1 день</span></h3>
+              <p>Деплой, домен, при необходимости аналитика. Передаём код, доступы и короткую документацию.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-index">05</span>
+          <h2 id="skills-title">Инструменты</h2>
+          <p class="section-sub">Выбираем под задачу, а не под тренд. Всё, что делаем, можем поддерживать сами.</p>
+        </div>
+
+        <div class="skills">
+          <article class="skill-card" data-reveal>
+            <h3>Интерфейсы</h3>
+            <ul>
+              <li>HTML, CSS, современный JavaScript</li>
+              <li>TypeScript и React, когда он оправдан</li>
+              <li>Дизайн-токены, тёмная тема, адаптив</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <h3>Мобильная разработка</h3>
+            <ul>
+              <li>Kotlin и Android SDK</li>
+              <li>Flutter и Dart</li>
+              <li>Capacitor: один код — web и Android</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <h3>Системы и игры</h3>
+            <ul>
+              <li>Rust: сеть, криптография, WebAssembly</li>
+              <li>Phaser 3, Three.js, Canvas</li>
+              <li>C# и DirectX для инструментов и отладки</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <h3>AI и автоматизация</h3>
+            <ul>
+              <li>Локальные LLM и on-device модели</li>
+              <li>Python: скрипты, парсинг, тулинг</li>
+              <li>Браузерная автоматизация и пайплайны</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="approach" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-index">06</span>
+          <h2 id="approach-title">Принципы</h2>
+          <p class="section-sub">Скорость вайб-кодинга без его типичных болезней.</p>
+        </div>
+
+        <ol class="principles">
+          <li data-reveal>
+            <span class="principles__num" aria-hidden="true">01</span>
+            <h3>Скорость без техдолга</h3>
+            <p>Быстрый старт не отменяет типы, тесты и ревью. Через полгода код должен быть понятен, а не страшен.</p>
+          </li>
+          <li data-reveal>
+            <span class="principles__num" aria-hidden="true">02</span>
+            <h3>Дизайн — часть продукта</h3>
+            <p>Типографика, ритм, состояния и анимации проектируются вместе с логикой, а не прикручиваются в конце.</p>
+          </li>
+          <li data-reveal>
+            <span class="principles__num" aria-hidden="true">03</span>
+            <h3>Всё принадлежит вам</h3>
+            <p>Репозиторий, домен, доступы и документация — ваши. Никаких закрытых конструкторов, из которых нельзя уйти.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-index">07</span>
+          <h2 id="faq-title">Вопросы</h2>
+          <p class="section-sub">Коротко о том, что обычно спрашивают до старта.</p>
+        </div>
+
+        <div class="faq" data-reveal>
+          <details>
+            <summary>Что такое вайб-кодинг и не получится ли «сырой» продукт?</summary>
+            <p>Это подход, где дизайн, код и проверка идут одним потоком с AI-ассистентом. Мы не отдаём результат на самотёк: каждый этап заканчивается работающим срезом, тестами и ревью. Скорость берём из процесса, качество — из дисциплины.</p>
+          </details>
+          <details>
+            <summary>Сколько стоит проект?</summary>
+            <p>Зависит от объёма. После брифа фиксируем смету и сроки: правки внутри согласованного объёма не оплачиваются отдельно. Формат — фиксированная стоимость или почасовая, если границы задачи пока размыты.</p>
+          </details>
+          <details>
+            <summary>Что нужно от меня для старта?</summary>
+            <p>Идея, контекст и 30 минут на бриф. Техническое задание не обязательно — поможем собрать его из ваших слов. Дальше — короткие демо каждые два-три дня и один канал связи без бюрократии.</p>
+          </details>
+          <details>
+            <summary>Кому принадлежит код и дизайн?</summary>
+            <p>Вам. Передаём репозиторий, доступы к домену и хостингу, документацию по сборке и деплою. Вы не привязаны к студии и можете продолжить с любой командой.</p>
+          </details>
+          <details>
+            <summary>Берёте существующий продукт?</summary>
+            <p>Да. Сначала аудит: смотрим код, скорость и узкие места, показываем отчёт. Потом — план работ и смета. Можем взять только фронтенд, только мобильную часть или весь продукт целиком.</p>
+          </details>
+          <details>
+            <summary>Как быстро можно начать?</summary>
+            <p>Обычно в течение недели. Первый прототип — через 3–5 дней после брифа. Если горит, напишите: иногда получается освободить слот раньше.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-panel" data-reveal>
+          <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> Свободны для новых проектов</p>
+          <h2 id="contact-title">Расскажите,<br>что нужно собрать</h2>
+          <p class="contact-panel__lead">
+            Опишите идею в двух-трёх предложениях — ответим по существу: с оценкой,
+            вариантами реализации и честным списком рисков.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="https://github.com/Erzkanzler2k" target="_blank" rel="noopener noreferrer">
+              Написать в GitHub <span aria-hidden="true">↗</span>
+            </a>
+            <a class="btn btn--ghost" href="#projects">Посмотреть работы</a>
+          </div>
+          <p class="contact-panel__note">GitHub — самый быстрый канал связи. Отвечаем в течение рабочего дня.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Erzkanzler Studio</p>
+      <p class="footer-note">Свёрстано вручную: без фреймворков, аналитики и cookie-баннеров.</p>
+      <a href="#top" class="footer-top">Наверх <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://erzkanzler2k.github.io/sitemap.xml

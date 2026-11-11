@@ -338,6 +338,8 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   scroll-margin-top: 96px;
 }
 
+.hero__inner > * { min-width: 0; }
+
 .hero__inner {
   display: grid;
   grid-template-columns: 1.12fr 0.88fr;
@@ -437,6 +439,7 @@ h1, h2, h3, p, dl, dd { margin: 0; }
 .hero__visual { perspective: 1200px; }
 
 .terminal {
+  max-width: 100%;
   border: 1px solid var(--line);
   border-radius: 16px;
   overflow: hidden;

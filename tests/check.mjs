@@ -6,7 +6,7 @@ import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const SITE_URL = "https://erzkanzler2k.github.io/";
+const SITE_URL = "https://erzkanzler.is-a.dev/";
 const read = (p) => readFileSync(resolve(ROOT, p), "utf8");
 
 let failed = 0;
@@ -37,7 +37,7 @@ const requiredFiles = [
 ];
 for (const f of requiredFiles) check(`есть ${f}`, existsSync(resolve(ROOT, f)));
 
-const refs = [...html.matchAll(/(?:href|src)="(\/(?:assets|favicon)[^"#?]*)"/g)].map((m) => m[1]);
+const refs = [...html.matchAll(/(?:href|src)="((?:\/)?(?:assets|favicon)[^"#?]*)"/g)].map((m) => m[1]);
 check("в разметке есть ссылки на локальные ассеты", refs.length >= 3);
 for (const ref of [...new Set(refs)]) {
   const p = ref.replace(/^\//, "").split("?")[0];
@@ -65,7 +65,7 @@ for (const prop of ["og:title", "og:description", "og:type", "og:locale", "og:si
 check("og:locale = ru_RU", /property="og:locale"[^>]+content="ru_RU"/.test(html));
 check("twitter:card", /name="twitter:card"/.test(html));
 const ogImage = (html.match(/property="og:image" content="([^"]+)"/) || [])[1] || "";
-check("og:image — абсолютный URL", /^https:\/\/erzkanzler2k\.github\.io\//.test(ogImage), ogImage);
+check("og:image — абсолютный URL", /^https:\/\/erzkanzler\.is-a\.dev\//.test(ogImage), ogImage);
 check("og:image существует в репозитории", ogImage && existsSync(resolve(ROOT, ogImage.replace(SITE_URL, ""))));
 check("og:image:width/height", /og:image:width" content="1200"/.test(html) && /og:image:height" content="630"/.test(html));
 check("twitter:card = summary_large_image", /name="twitter:card" content="summary_large_image"/.test(html));
@@ -77,8 +77,8 @@ const jsonld = (html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/sc
 let parsed = null;
 try { parsed = JSON.parse(jsonld); } catch { /* ниже */ }
 check("JSON-LD корректный JSON", !!parsed);
-check('JSON-LD @type = ProfessionalService', parsed && parsed["@type"] === "ProfessionalService");
-check("JSON-LD name содержит Studio", parsed && /Studio/.test(parsed.name || ""));
+check('JSON-LD @type = Person', parsed && parsed["@type"] === "Person");
+check("JSON-LD alternateName задан", parsed && !!parsed.alternateName);
 check("JSON-LD url указывает на сайт", parsed && parsed.url === SITE_URL);
 check("JSON-LD sameAs → GitHub", parsed && JSON.stringify(parsed.sameAs || []).includes("github.com/Erzkanzler2k"));
 
@@ -110,16 +110,14 @@ check("target=_blank с rel=noopener", blank.every((t) => /rel="[^"]*noopener/.t
 check("нет inline-обработчиков (onclick и т.п.)", !/\son(click|load|error|mouseover)=/i.test(html));
 
 section("Контент");
-const cards = [...html.matchAll(/<a class="project-card"/g)].length;
+const cards = [...html.matchAll(/<a class="work"/g)].length;
 check(`карточек проектов ≥ 6 (${cards})`, cards >= 6);
 const ghLinks = [...html.matchAll(/https:\/\/github\.com\/Erzkanzler2k\/([A-Za-z0-9._-]+)/g)].map((m) => m[1]);
 check("ссылки на GitHub-проекты", new Set(ghLinks).size >= 6, `уникальных: ${new Set(ghLinks).size}`);
 check("нет lorem ipsum", !/lorem\s+ipsum/i.test(html));
 check("нет незаполненных плейсхолдеров", !/\{\{|\bTODO\b|TODO:/i.test(html));
 check("есть секции #about #projects #skills #contact", ["about", "projects", "skills", "contact"].every((id) => html.includes(`id="${id}"`)));
-check("есть секции #services #process #faq", ["services", "process", "faq"].every((id) => html.includes(`id="${id}"`)));
-const faq = [...html.matchAll(/<details>/g)].length;
-check(`FAQ: блоков details ≥ 4 (${faq})`, faq >= 4);
+check("в списке работ есть ссылка на все репозитории", html.includes("?tab=repositories"));
 
 section("Инфраструктура деплоя");
 check("robots.txt ссылается на sitemap", read("robots.txt").includes(`Sitemap: ${SITE_URL}sitemap.xml`));

@@ -11,7 +11,7 @@
   --line-strong: rgba(255, 255, 255, 0.16);
   --text: #edeef4;
   --muted: #9096a8;
-  --muted-soft: rgba(255, 255, 255, 0.42);
+  --muted-soft: rgba(255, 255, 255, 0.55);
   --accent: #8b5cf6;
   --accent-2: #22d3ee;
   --accent-3: #4ade80;
@@ -1022,7 +1022,7 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   gap: 14px;
 }
 
-.footer-note { color: rgba(255, 255, 255, 0.32); }
+.footer-note { color: rgba(255, 255, 255, 0.5); }
 
 .footer-top {
   color: var(--muted);

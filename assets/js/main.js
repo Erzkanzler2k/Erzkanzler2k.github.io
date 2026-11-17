@@ -47,7 +47,9 @@
           })
         : [];
       var index = Math.max(0, siblings.indexOf(el));
-      el.style.setProperty("--reveal-delay", Math.min(index, 5) * 40 + "ms");
+      // No stagger for work cards - they should appear as a unit
+      var isWorkCard = el.classList.contains("work");
+      el.style.setProperty("--reveal-delay", isWorkCard ? "0ms" : Math.min(index, 5) * 40 + "ms");
       revealObserver.observe(el);
     });
   } else {

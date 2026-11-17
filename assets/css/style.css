@@ -747,8 +747,8 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   border-radius: 50%;
   font-size: 0.9rem;
   color: var(--muted);
-  transition: transform 0.35s var(--ease), background 0.35s var(--ease),
-              color 0.35s var(--ease), border-color 0.35s var(--ease);
+  transition: transform 0.25s var(--ease), background 0.25s var(--ease),
+              color 0.25s var(--ease), border-color 0.25s var(--ease);
 }
 
 .project-card:hover .project-card__arrow {
@@ -1065,7 +1065,7 @@ h1, h2, h3, p, dl, dd { margin: 0; }
 }
 
 .work:hover {
-  background: linear-gradient(90deg, rgba(139, 92, 246, 0.07), transparent 70%);
+  background: rgba(139, 92, 246, 0.05);
 }
 
 .work__num {
@@ -1106,8 +1106,8 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   border: 1px solid var(--line);
   border-radius: 50%;
   color: var(--muted);
-  transition: transform 0.35s var(--ease), background 0.35s var(--ease),
-              color 0.35s var(--ease), border-color 0.35s var(--ease);
+  transition: transform 0.25s var(--ease), background 0.25s var(--ease),
+              color 0.25s var(--ease), border-color 0.25s var(--ease);
 }
 
 .work:hover .work__arrow {

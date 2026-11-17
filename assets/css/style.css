@@ -20,6 +20,8 @@
   --space-xl: 32px;
   --space-2xl: 48px;
 
+  --divider: var(--line-strong);
+
   --bg: #07080b;
   --bg-elev: #0c0e14;
   --surface: rgba(255, 255, 255, 0.028);
@@ -775,17 +777,18 @@ h1, h2, h3, p, dl, dd { margin: 0; }
 .chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: var(--space-xs);
   margin: 4px 0 0;
   padding: 0;
 }
 
 .chips li {
-  padding: 4px 9px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-full);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
   font-size: 0.7rem;
-  color: var(--muted);
+  font-family: var(--font-mono);
+  color: var(--muted-soft);
 }
 
 /* ---------- стек ---------- */
@@ -958,14 +961,15 @@ h1, h2, h3, p, dl, dd { margin: 0; }
 }
 
 .badge {
-  padding: 3px 10px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-full);
-  font-family: var(--font-body);
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: var(--muted);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-2);
   white-space: nowrap;
 }
 
@@ -1051,7 +1055,7 @@ h1, h2, h3, p, dl, dd { margin: 0; }
 }
 
 /* ---------- портфолио: список работ ---------- */
-.worklist { border-top: 1px solid var(--line-strong); }
+.worklist { border-top: 1px solid var(--divider, var(--line-strong)); }
 
 .work {
   display: grid;
@@ -1101,10 +1105,10 @@ h1, h2, h3, p, dl, dd { margin: 0; }
 .work__arrow {
   display: grid;
   place-items: center;
-  width: 38px;
-  height: 38px;
+  width: var(--space-xl); /* 32px */
+  height: var(--space-xl);
   border: 1px solid var(--line);
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   color: var(--muted);
   transition: transform 0.25s var(--ease), background 0.25s var(--ease),
               color 0.25s var(--ease), border-color 0.25s var(--ease);

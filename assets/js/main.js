@@ -100,6 +100,32 @@
     });
   }
 
+  /* ---------- терминал toggle ---------- */
+  var terminal = doc.getElementById("terminal");
+  var terminalToggle = terminal && terminal.querySelector(".terminal__toggle");
+  var terminalBody = doc.getElementById("terminal-body");
+
+  if (terminal && terminalToggle && terminalBody) {
+    terminalToggle.addEventListener("click", function () {
+      var isHidden = terminal.hidden;
+      terminal.hidden = !isHidden;
+      terminalToggle.setAttribute("aria-expanded", String(!isHidden));
+      terminal.setAttribute("aria-expanded", String(!isHidden));
+      if (!isHidden) {
+        // Focus the body for accessibility
+        terminalBody.focus();
+      }
+    });
+
+    // Keyboard support
+    terminalToggle.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        terminalToggle.click();
+      }
+    });
+  }
+
   /* ---------- активный пункт меню ---------- */
   var sections = Array.prototype.slice.call(doc.querySelectorAll("main section[id]"));
   var navLinks = Array.prototype.slice.call(doc.querySelectorAll(".nav__list a"));

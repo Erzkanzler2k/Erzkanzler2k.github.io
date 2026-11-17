@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Одностраничное портфолио инженера-разработчика. Чистый HTML, CSS и немного ванильного JS: без сборки, фреймворков, аналитики и cookie-баннеров.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erzkanzler2k/Erzkanzler2k.github.io.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Erzkanzler2k/Erzkanzler2k.github.io/issues"
+  },
+  "homepage": "https://github.com/Erzkanzler2k/Erzkanzler2k.github.io#readme",
+  "dependencies": {
+    "playwright": "^1.65.1"
+  }
+}

@@ -109,9 +109,6 @@
             <a class="btn btn--primary" href="#projects">
               Избранные проекты <span aria-hidden="true">↓</span>
             </a>
-            <a class="btn btn--ghost" href="https://github.com/Erzkanzler2k" target="_blank" rel="noopener noreferrer">
-              GitHub <span aria-hidden="true">↗</span>
-            </a>
           </div>
 
           <ul class="hero__meta" data-reveal>
@@ -122,13 +119,13 @@
         </div>
 
         <div class="hero__visual" data-reveal>
-          <div class="terminal">
-            <div class="terminal__bar">
-              <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
-              <em>~/erzkanzler</em>
-            </div>
-            <pre class="terminal__body" role="img" aria-label="Краткая сводка о разработчике"><code><span class="c-prompt">$</span> whoami
-<span class="c-out">erzkanzler — systems &amp; product engineer</span>
+          <div class="terminal" id="terminal" hidden>
+            <button class="terminal__toggle" aria-expanded="false" aria-controls="terminal-body" aria-label="Показать терминал">
+              <span class="terminal__toggle-icon" aria-hidden="true">▼</span>
+              <span>~/erzkanzler</span>
+            </button>
+            <pre class="terminal__body" id="terminal-body" role="img" aria-label="Краткая сводка о разработчике"><code><span class="c-prompt">$</span> whoami
+<span class="c-out">erzkanzler — systems & product engineer</span>
 <span class="c-prompt">$</span> ls stack/
 <span class="c-out">rust  kotlin  typescript  python  csharp  dart</span>
 <span class="c-prompt">$</span> cat focus.txt
@@ -139,15 +136,7 @@
         </div>
       </div>
 
-      <div class="container">
-        <ul class="now" data-reveal aria-label="Чем занят сейчас">
-          <li><span>Сейчас</span>Пишу P2P-ядро на Rust</li>
-          <li><span>Ещё</span>Собираю игры на Phaser 3</li>
-          <li><span>И</span>Исследую локальные LLM</li>
-        </ul>
-      </div>
-
-      <div class="marquee" aria-hidden="true">
+      <div class="marquee" aria-hidden="true">      <div class="marquee" aria-hidden="true">
         <div class="marquee__track">
           <span>Rust</span><span>Kotlin</span><span>TypeScript</span><span>WebAssembly</span><span>Flutter</span><span>Python</span><span>C#</span><span>DirectX 11</span><span>Phaser 3</span><span>P2P</span><span>Local AI</span>
           <span>Rust</span><span>Kotlin</span><span>TypeScript</span><span>WebAssembly</span><span>Flutter</span><span>Python</span><span>C#</span><span>DirectX 11</span><span>Phaser 3</span><span>P2P</span><span>Local AI</span>

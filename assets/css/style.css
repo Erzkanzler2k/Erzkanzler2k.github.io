@@ -506,7 +506,67 @@ h1, h2, h3, p, dl, dd { margin: 0; }
 
 @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
 
-/* бегущая строка */
+/* terminal toggle */
+.terminal[hidden] { display: none; }
+.terminal:not([hidden]) { display: block; }
+
+.terminal__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01));
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+.terminal__toggle:hover {
+  background: linear-gradient(180deg, rgba(139, 92, 246, 0.1), rgba(255, 255, 255, 0.015));
+  border-color: rgba(139, 92, 246, 0.42);
+}
+.terminal__toggle:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 2px;
+}
+.terminal__toggle-icon {
+  display: inline-block;
+  transition: transform 0.3s var(--ease);
+}
+.terminal[aria-expanded="true"] .terminal__toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* terminal body when expanded */
+.terminal__body {
+  margin: 0;
+  padding: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.81rem;
+  line-height: 1.9;
+  color: #c9cede;
+  overflow-x: auto;
+  white-space: pre;
+  animation: terminalReveal 0.4s var(--ease);
+}
+
+@keyframes terminalReveal {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Increase hero vertical padding for more breathing room */
+.hero {
+  padding-top: clamp(160px, 22vh, 240px);
+}
+
+/* Hero visual - reduce perspective effect when terminal is hidden */
+.hero__visual { perspective: 1200px; }
+.hero__visual:has(.terminal[hidden]) { perspective: none; }
 .marquee {
   margin-top: clamp(56px, 8vw, 92px);
   border-top: 1px solid var(--line);

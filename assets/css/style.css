@@ -721,7 +721,7 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   margin-bottom: 12px;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(1.9rem, 3.6vw, 2.95rem);
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
   line-height: 1.1;
   letter-spacing: -0.03em;
 }

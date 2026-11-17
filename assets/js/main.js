@@ -127,6 +127,15 @@
     });
   }
 
+  /* ---------- service worker ---------- */
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('/sw.js').catch(function (err) {
+        console.warn('SW registration failed:', err);
+      });
+    });
+  }
+
   /* ---------- активный пункт меню ---------- */
   var sections = Array.prototype.slice.call(doc.querySelectorAll("main section[id]"));
   var navLinks = Array.prototype.slice.call(doc.querySelectorAll(".nav__list a"));

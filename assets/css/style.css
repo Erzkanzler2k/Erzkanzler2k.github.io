@@ -1061,6 +1061,7 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   padding: 26px 0;
   border-bottom: 1px solid var(--line);
   transition: background 0.35s var(--ease);
+  min-height: 108px; /* consistent card height */
 }
 
 .work:hover {
@@ -1091,6 +1092,10 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   font-size: 0.92rem;
   line-height: 1.66;
   color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .work__arrow {

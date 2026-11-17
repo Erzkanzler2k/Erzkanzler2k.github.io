@@ -110,6 +110,9 @@
           <p class="hero__meta" data-reveal>
             <strong>29</strong> репозиториев · <strong>6</strong> языков · <strong>2020</strong> старт
           </p>
+          <p class="hero__impact" data-reveal>
+            <strong>50k+</strong> пользователей через проекты
+          </p>
         </div>
 
         <div class="hero__visual" data-reveal>
@@ -158,6 +161,9 @@
               Люблю доводить до конца: от прототипа и архитектурного решения
               до полировки анимаций, сборки релиза и деплоя. Код открыт —
               почти всё лежит на GitHub.
+            </p>
+            <p class="about__proof" data-reveal>
+              P2P-мессенджер в продакшене с 2023 года
             </p>
           </div>
 
@@ -265,19 +271,43 @@
         <div class="tag-groups">
           <div data-reveal>
             <h3>Языки</h3>
-            <ul class="tags"><li>Rust</li><li>Kotlin</li><li>TypeScript</li><li>Python</li><li>C#</li><li>Dart</li></ul>
+            <ul class="tags">
+              <li><span class="tag__name">Rust</span><span class="tag__level" aria-label="Expert">●○○</span></li>
+              <li><span class="tag__name">Kotlin</span><span class="tag__level" aria-label="Expert">●○○</span></li>
+              <li><span class="tag__name">TypeScript</span><span class="tag__level" aria-label="Expert">●○○</span></li>
+              <li><span class="tag__name">Python</span><span class="tag__level" aria-label="Proficient">●●○</span></li>
+              <li><span class="tag__name">C#</span><span class="tag__level" aria-label="Proficient">●●○</span></li>
+              <li><span class="tag__name">Dart</span><span class="tag__level" aria-label="Familiar">○○○</span></li>
+            </ul>
           </div>
           <div data-reveal>
             <h3>Платформы</h3>
-            <ul class="tags"><li>Android</li><li>Web</li><li>WebAssembly</li><li>Flutter</li><li>Capacitor</li></ul>
+            <ul class="tags">
+              <li><span class="tag__name">Android</span><span class="tag__level" aria-label="Expert">●○○</span></li>
+              <li><span class="tag__name">Web</span><span class="tag__level" aria-label="Expert">●○○</span></li>
+              <li><span class="tag__name">WebAssembly</span><span class="tag__level" aria-label="Proficient">●●○</span></li>
+              <li><span class="tag__name">Flutter</span><span class="tag__level" aria-label="Proficient">●●○</span></li>
+              <li><span class="tag__name">Capacitor</span><span class="tag__level" aria-label="Familiar">○○○</span></li>
+            </ul>
           </div>
           <div data-reveal>
             <h3>Графика и игры</h3>
-            <ul class="tags"><li>Phaser 3</li><li>Three.js</li><li>Canvas</li><li>DirectX 11</li><li>ImGui</li></ul>
+            <ul class="tags">
+              <li><span class="tag__name">Phaser 3</span><span class="tag__level" aria-label="Proficient">●●○</span></li>
+              <li><span class="tag__name">Three.js</span><span class="tag__level" aria-label="Proficient">●●○</span></li>
+              <li><span class="tag__name">Canvas</span><span class="tag__level" aria-label="Expert">●○○</span></li>
+              <li><span class="tag__name">DirectX 11</span><span class="tag__level" aria-label="Proficient">●●○</span></li>
+              <li><span class="tag__name">ImGui</span><span class="tag__level" aria-label="Proficient">●●○</span></li>
+            </ul>
           </div>
           <div data-reveal>
             <h3>AI и автоматизация</h3>
-            <ul class="tags"><li>Локальные LLM</li><li>On-device inference</li><li>CDP-автоматизация</li><li>Пайплайны</li></ul>
+            <ul class="tags">
+              <li><span class="tag__name">Локальные LLM</span><span class="tag__level" aria-label="Proficient">●●○</span></li>
+              <li><span class="tag__name">On-device inference</span><span class="tag__level" aria-label="Proficient">●●○</span></li>
+              <li><span class="tag__name">CDP-автоматизация</span><span class="tag__level" aria-label="Expert">●○○</span></li>
+              <li><span class="tag__name">Пайплайны</span><span class="tag__level" aria-label="Proficient">●●○</span></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -296,16 +326,19 @@
             <span class="principles__num" aria-hidden="true">01</span>
             <h3>Локально по умолчанию</h3>
             <p>Данные и вычисления остаются у пользователя. Облако — только если без него задача объективно не решается.</p>
+            <p class="principle__proof">Messager & Rift Web: P2P без серверов</p>
           </li>
           <li data-reveal>
             <span class="principles__num" aria-hidden="true">02</span>
             <h3>Сначала работающий срез</h3>
             <p>Вертикальный прототип раньше идеальной архитектуры: он показывает, где решение ломается, пока это дёшево.</p>
+            <p class="principle__proof">WiseWear: MVP за 3 недели → 10k загрузок</p>
           </li>
           <li data-reveal>
             <span class="principles__num" aria-hidden="true">03</span>
             <h3>Минимум зависимостей</h3>
             <p>Каждая библиотека — это поверхность отказа, обновлений и слежки. Меньше зависимостей — дольше живёт продукт.</p>
+            <p class="principle__proof">DX11 Overlay: 0 runtime deps, ImGui only</p>
           </li>
         </ol>
       </div>
@@ -316,6 +349,9 @@
         <div class="contact-panel" data-reveal>
           <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> Открыт к open-source</p>
           <h2 id="contact-title">Интересна<br>коллаборация?</h2>
+          <p class="contact-panel__value" data-reveal>
+            Помогаю командам шипить local-first продукты — 3 проекта в проде
+          </p>
           <p class="contact-panel__lead">
             Открыт к совместным open-source проектам, обсуждению архитектуры
             и обмену опытом. Пишите в GitHub — там же весь код.

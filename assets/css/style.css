@@ -573,6 +573,15 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   font-variant-numeric: tabular-nums;
 }
 
+.hero__impact {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--accent-3);
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
 /* терминальная карточка */
 .hero__visual { perspective: 1200px; }
 
@@ -794,6 +803,17 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   vertical-align: middle;
 }
 
+.about__proof {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--accent-3);
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
 /* ---------- проекты ---------- */
 .projects {
   display: grid;
@@ -985,6 +1005,15 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   font-size: 0.91rem;
   line-height: 1.68;
   color: var(--muted);
+}
+
+.principle__proof {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--accent-3);
+  font-family: var(--font-mono);
+  font-weight: 500;
 }
 
 /* ---------- услуги ---------- */
@@ -1303,6 +1332,17 @@ h1, h2, h3, p, dl, dd { margin: 0; }
 
 .tags li:hover { border-color: rgba(139, 92, 246, 0.5); color: var(--text); }
 
+.tag__name {
+  font-weight: 500;
+}
+
+.tag__level {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--accent-3);
+  opacity: 0.7;
+}
+
 @media (max-width: 640px) {
   .work { grid-template-columns: 40px minmax(0, 1fr); gap: 14px; }
   .work__arrow { display: none; }
@@ -1338,6 +1378,15 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   font-size: 1rem;
   line-height: 1.72;
   color: #b6bac9;
+}
+
+.contact-panel__value {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--accent-3);
+  font-family: var(--font-mono);
+  font-weight: 600;
 }
 
 .contact-panel__note {

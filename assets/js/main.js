@@ -24,39 +24,26 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  /* ---------- появление блоков ---------- */
-  var revealables = Array.prototype.slice.call(doc.querySelectorAll("[data-reveal]"));
-
-  if (!reduceMotion && "IntersectionObserver" in window) {
-    var revealObserver = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("is-in");
-          revealObserver.unobserve(entry.target);
-        });
-      },
-      { rootMargin: "0px 0px -6% 0px", threshold: 0.08 }
-    );
-
-    revealables.forEach(function (el) {
-      var siblings = el.parentElement
-        ? Array.prototype.filter.call(el.parentElement.children, function (n) {
-            return n.hasAttribute("data-reveal");
-          })
-        : [];
-      var index = Math.max(0, siblings.indexOf(el));
-      // No stagger for sections or work cards - they should appear as a unit
-      var isSection = el.closest(".section");
-      var isWorkCard = el.classList.contains("work");
-      var noStagger = isSection || isWorkCard;
-      el.style.setProperty("--reveal-delay", noStagger ? "0ms" : Math.min(index, 5) * 40 + "ms");
-      revealObserver.observe(el);
-    });
-  } else {
-    revealables.forEach(function (el) {
-      el.classList.add("is-in");
-    });
+  /* ---------- появление блоков (CSS scroll-driven animations) ---------- */
+  // Reveals handled via CSS animation-timeline: view()
+  // Fallback for browsers without scroll-driven animations support
+  if (!("animationTimeline" in document.documentElement.style)) {
+    var revealables = Array.prototype.slice.call(doc.querySelectorAll("[data-reveal]"));
+    if (!reduceMotion && "IntersectionObserver" in window) {
+      var revealObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-in");
+            revealObserver.unobserve(entry.target);
+          });
+        },
+        { rootMargin: "0px 0px -6% 0px", threshold: 0.08 }
+      );
+      revealables.forEach(function (el) { revealObserver.observe(el); });
+    } else {
+      revealables.forEach(function (el) { el.classList.add("is-in"); });
+    }
   }
 
   /* ---------- подсветка карточек под курсором ---------- */

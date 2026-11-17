@@ -29,7 +29,31 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/inter-var.woff2">
   <link rel="preload" as="font" type="font/ttf" crossorigin href="/assets/fonts/unbounded-var.ttf">
+  <link rel="preconnect" href="https://github.githubassets.com" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Critical CSS for hero - inlined to eliminate render-blocking */
+    :root{--bg:#07080b;--text:#e8eaed;--muted:#9aa4b2;--muted-soft:#6b7280;--accent:#8b5cf6;--accent-2:#a78bfa;--accent-3:#4ade80;--line:#1f2430;--line-strong:#2d3548;--surface:#0e1117;--gradient:linear-gradient(135deg,#8b5cf6,#4ade80);--font-display:"Unbounded",system-ui,sans-serif;--font-body:"Inter",system-ui,sans-serif;--font-mono:"JetBrains Mono",monospace;--ease:cubic-bezier(.4,0,.2,1);--radius-sm:8px;--radius-md:16px;--radius-lg:24px;--radius-full:999px;--space-xs:4px;--space-sm:8px;--space-md:16px;--space-lg:24px;--space-xl:32px;--space-2xl:48px}
+    *, *::before, *::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:var(--font-body);font-size:1rem;line-height:1.65;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:120px 0 80px;overflow:hidden}
+    .hero__inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1200px;width:100%;margin:0 auto;padding:0 24px}
+    .hero__title{font-family:var(--font-display);font-size:clamp(2.3rem,10.5vw,3.2rem);font-weight:600;line-height:1.06;letter-spacing:-0.03em;margin:0 0 16px}
+    .hero__title-accent{background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero__lead{font-size:clamp(0.95rem,1vw,1.05rem);line-height:1.7;color:var(--muted);max-width:54ch;margin:0 0 32px}
+    .hero__lead em{font-style:normal;color:var(--text);font-weight:500}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:var(--radius-button);font-family:var(--font-body);font-size:0.92rem;font-weight:500;text-decoration:none;transition:transform .15s var(--ease),box-shadow .15s var(--ease)}
+    .btn--primary{background:var(--gradient);color:#07080b;box-shadow:0 6px 24px -8px rgba(139,92,246,.9)}
+    .btn--primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px -8px rgba(139,92,246,.9)}
+    .hero__meta{font-size:0.78rem;color:var(--muted);font-family:var(--font-mono);margin-top:24px}
+    .hero__meta strong{font-family:var(--font-display);font-size:0.9rem;font-weight:500;color:var(--text);font-variant-numeric:tabular-nums;margin-right:4px}
+    .hero__impact{margin-top:12px;font-size:0.85rem;line-height:1.5;color:var(--accent-3);font-family:var(--font-mono);font-weight:600}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:0.78rem;font-family:var(--font-mono);color:var(--accent-2);text-transform:uppercase;letter-spacing:.12em;margin:0 0 16px}
+    .pulse-static{width:6px;height:6px;border-radius:50%;background:var(--accent-3);box-shadow:0 0 12px rgba(74,222,128,.8)}
+    @media (max-width:860px){.hero__inner{grid-template-columns:1fr;gap:40px;text-align:center}.hero__lead{max-width:none}.hero__meta{margin-left:auto;margin-right:auto}}
+  </style>
 
   <script type="application/ld+json">
   {

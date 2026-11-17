@@ -199,6 +199,7 @@ h1, h2, h3, p, dl, dd { margin: 0; }
 .site-header.is-scrolled {
   background: rgba(7, 8, 11, 0.82);
   border-bottom-color: var(--line);
+  transition: background 0.1s var(--ease), border-color 0.1s var(--ease);
 }
 
 .header-inner {
@@ -259,7 +260,7 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   background: var(--gradient);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.35s var(--ease);
+  transition: transform 0.15s var(--ease);
 }
 
 .nav__list a:hover,

@@ -536,25 +536,25 @@ h1, h2, h3, p, dl, dd { margin: 0; }
 .terminal__toggle {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   width: 100%;
-  padding: 10px 14px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01));
-  color: var(--text);
+  padding: 6px 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   cursor: pointer;
-  transition: background 0.3s var(--ease), border-color 0.3s var(--ease);
+  transition: color 0.2s var(--ease);
 }
 .terminal__toggle:hover {
-  background: linear-gradient(180deg, rgba(139, 92, 246, 0.1), rgba(255, 255, 255, 0.015));
-  border-color: rgba(139, 92, 246, 0.42);
+  color: var(--accent-2);
 }
 .terminal__toggle:focus-visible {
   outline: 2px solid var(--accent-2);
   outline-offset: 2px;
+  border-radius: var(--radius-sm);
 }
 .terminal__toggle-icon {
   display: inline-block;

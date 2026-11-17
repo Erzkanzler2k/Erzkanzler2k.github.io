@@ -151,23 +151,7 @@ h1, h2, h3, p, dl, dd { margin: 0; }
 }
 
 /* ---------- прогресс и skip-link ---------- */
-.progress {
-  position: fixed;
-  inset: 0 0 auto 0;
-  height: 1px;
-  z-index: 60;
-  background: transparent;
-  pointer-events: none;
-}
 
-#progress-bar {
-  display: block;
-  height: 1px;
-  width: 0;
-  background: var(--accent);
-  box-shadow: none;
-  opacity: 0.5;
-}
 
 .skip-link {
   position: absolute;
@@ -1367,7 +1351,7 @@ h1, h2, h3, p, dl, dd { margin: 0; }
 }
 
 @media print {
-  .bg, .grain, .progress, .site-header, .marquee, .nav-toggle { display: none !important; }
+  .bg, .grain, .site-header, .marquee, .nav-toggle { display: none !important; }
   body { background: #fff; color: #000; }
   .section { padding: 24px 0; }
   .project-card, .skill-card, .facts > div { border-color: #ccc; background: none; }

@@ -37,7 +37,7 @@
           revealObserver.unobserve(entry.target);
         });
       },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
+      { rootMargin: "0px 0px -6% 0px", threshold: 0.08 }
     );
 
     revealables.forEach(function (el) {
@@ -47,7 +47,7 @@
           })
         : [];
       var index = Math.max(0, siblings.indexOf(el));
-      el.style.setProperty("--reveal-delay", Math.min(index, 5) * 70 + "ms");
+      el.style.setProperty("--reveal-delay", Math.min(index, 5) * 40 + "ms");
       revealObserver.observe(el);
     });
   } else {

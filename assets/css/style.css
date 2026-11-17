@@ -359,13 +359,12 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   color: var(--muted);
 }
 
-.pulse {
+.pulse-static {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: var(--accent-3);
   box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.14);
-  animation: pulse 2.6s ease-out infinite;
 }
 
 @keyframes pulse {
@@ -578,39 +577,7 @@ h1, h2, h3, p, dl, dd { margin: 0; }
 /* Hero visual - reduce perspective effect when terminal is hidden */
 .hero__visual { perspective: 1200px; }
 .hero__visual:has(.terminal[hidden]) { perspective: none; }
-.marquee {
-  margin-top: clamp(56px, 8vw, 92px);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 16px 0;
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
-}
 
-.marquee__track {
-  display: flex;
-  gap: 44px;
-  width: max-content;
-  animation: marquee 34s linear infinite;
-}
-
-.marquee:hover .marquee__track { animation-play-state: paused; }
-
-.marquee__track span {
-  font-family: var(--font-display);
-  font-size: 0.78rem;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.42);
-  white-space: nowrap;
-}
-
-@keyframes marquee {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(-50%, 0, 0); }
-}
 
 /* ---------- секции ---------- */
 .section {
@@ -1251,8 +1218,9 @@ h1, h2, h3, p, dl, dd { margin: 0; }
 /* ---------- появление ---------- */
 .js [data-reveal] {
   opacity: 0;
-  transform: translateY(26px);
-  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+  transform: translateY(16px);
+  will-change: opacity, transform;
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
   transition-delay: var(--reveal-delay, 0ms);
 }
 

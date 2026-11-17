@@ -173,18 +173,13 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 50;
-  backdrop-filter: blur(18px) saturate(140%);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
-  background: rgba(7, 8, 11, 0.55);
-  border-bottom: 1px solid transparent;
-  transition: background 0.35s var(--ease), border-color 0.35s var(--ease);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  background: rgba(7, 8, 11, 0.82);
+  border-bottom: 1px solid var(--line);
 }
 
-.site-header.is-scrolled {
-  background: rgba(7, 8, 11, 0.82);
-  border-bottom-color: var(--line);
-  transition: background 0.1s var(--ease), border-color 0.1s var(--ease);
-}
+
 
 .header-inner {
   display: flex;

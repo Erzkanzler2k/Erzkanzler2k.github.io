@@ -14,7 +14,6 @@
 
   function onScroll() {
     var y = window.scrollY || doc.documentElement.scrollTop;
-    if (header) header.classList.toggle("is-scrolled", y > 8);
     if (bar) {
       var max = doc.documentElement.scrollHeight - window.innerHeight;
       var pct = max > 0 ? Math.min(100, (y / max) * 100) : 0;
